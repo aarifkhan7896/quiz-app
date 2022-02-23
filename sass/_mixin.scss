@@ -1,0 +1,38 @@
+@mixin display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin modal {
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  background-color: #fff;
+  width: 60rem;
+  padding: 1.5rem 5.5rem;
+  box-shadow: 5px 0px 5px -1px #ebebeb, -5px 0px 5px -1px #ebebeb;
+  animation: instructionModalAnimation 0.5s ease-in-out;
+}
+@mixin heading {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+@mixin list {
+  font-size: 2rem;
+  line-height: 1cm;
+}
+@mixin btn {
+  background-color: transparent;
+  border: 1px solid #6e88fd;
+  color: #333333;
+  cursor: pointer;
+  font-size: 1.6rem;
+  padding: 1rem 3rem;
+  transition: all 1s;
+  margin: 0 1rem;
+}
+@mixin hover {
+  background-color: #6e88fd;
+  color: #fff;
+}

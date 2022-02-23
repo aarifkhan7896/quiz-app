@@ -1,0 +1,116 @@
+@import "mixin";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #fff;
+  color: #333333;
+}
+#main {
+  @include display();
+  height: 90vh;
+  #startBtn {
+    @include btn();
+    &:hover {
+      @include hover();
+    }
+  }
+  .instructionModal {
+    @include modal();
+    display: none;
+    z-index: 1;
+
+    @keyframes instructionModalAnimation {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    h1 {
+      @include heading();
+    }
+    ol {
+      li {
+        @include list();
+      }
+    }
+    .instructionBtn {
+      position: relative;
+      margin: 1rem;
+      text-align: center;
+
+      #exitBtn {
+        @include hover();
+        border: none;
+        cursor: pointer;
+        font-size: 1.6rem;
+        padding: 1.1rem 3rem;
+      }
+      #continueBtn {
+        @include btn();
+        &:hover {
+          @include hover();
+        }
+      }
+    }
+  }
+  .instructionActive {
+    display: flex;
+  }
+
+  .questionModal {
+    @include modal();
+    z-index: 2;
+    display: none;
+
+    h1 {
+      @include heading();
+    }
+    ol {
+      li {
+        @include list();
+        background-color: #ffff0018;
+        border: 1px solid #97a9fd;
+        margin: 0.5rem 0;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+      }
+    }
+    .submitButton {
+      position: relative;
+      margin: 1rem;
+      text-align: center;
+
+      #submitBtn {
+        @include btn();
+
+        &:hover {
+          @include hover();
+        }
+      }
+    }
+  }
+  .questionModalActive {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 700px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  html {
+    font-size: 25%;
+  }
+}

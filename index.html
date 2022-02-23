@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sass/style.css" />
+    <title>Quiz App</title>
+  </head>
+  <body>
+    <section id="main">
+      <button id="startBtn">Start</button>
+      <div class="instructionModal">
+        <div class="heading">
+          <h1>Instructions</h1>
+        </div>
+        <div class="content">
+          <ol>
+            <li>Click on ‘Continue’ button</li>
+            <li>For each of the questions you have four possible answers</li>
+            <li>Click on the answer that you think is right</li>
+            <li>Continue until you have answered all of the questions</li>
+          </ol>
+          <div class="instructionBtn">
+            <button id="exitBtn">Exit</button>
+            <button id="continueBtn">Continue</button>
+          </div>
+        </div>
+      </div>
+      <div class="questionModal">
+        <div class="heading" id="heading"></div>
+        <div class="content">
+          <ol id="options"></ol>
+          <div class="submitButton">
+            <button id="submitBtn">Next</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
